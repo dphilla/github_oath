@@ -3,14 +3,15 @@ class ApplicationController < ActionController::Base
   helper_method :client_id, :client_secret, :current_user
 
   def client_id
-    ######### - from gh dev page
+    "aef031459b047bd01314"
   end
 
   def client_secret
-    ######## from gh dev page
+    "b0d36606843106c11e9468df261d55f1d151c54d"
   end
 
   def current_user
+    #require 'pry'; binding.pry
     @current_user ||= User.find(session[:user_id])
   end
 
